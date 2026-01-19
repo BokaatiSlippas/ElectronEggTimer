@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arik's Egg Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <div class="drag-bar">
+            <div class="title">Arik’s Egg Timer</div>
+        </div>
+
+        <div class="timer-display" id="timer">
+            <span class="minutes">00</span>
+            <span class="colon">:</span>
+            <span class="seconds">00</span>
+        </div>
+
+        <div class="egg-display-container">
+            <img id="eggImage" class="egg-image" src="assets/Egg0.png" alt="Boiling Egg">
+        </div>
+        
+        <div class="controls">
+            <button id="startBtn" class="btn start">Start</button>
+            <button id="pauseBtn" class="btn pause">Pause</button>
+            <button id="resetBtn" class="btn reset">Reset</button>
+        </div>
+        
+        <div class="egg-options">
+            <button class="egg-type" data-time="5">Gooey (8.5 min)</button>
+            <button class="egg-type" data-time="10">Soft boiled (9 min)</button>
+            <button class="egg-type" data-time="15">Hard boiled (10 min)</button>
+            <button class="egg-type" data-time="20">Stupid (11 min)</button>
+        </div>
+
+        <div class="preload" style="display: none;">
+            <img src="assets/Egg0.png">
+            <img src="assets/Egg1.png">
+            <img src="assets/Egg2.png">
+            <img src="assets/Egg3.png">
+            <img src="assets/Egg4.png">
+            <img src="assets/Egg5.png">
+            <img src="assets/Egg6.png">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

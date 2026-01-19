@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    background: transparent;
+}
+
+
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 280px;
+    width: fit-content;
+    padding: 1rem;
+
+    background-image: url("assets/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.9;
+    -webkit-app-region: no-drag;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+
+input,
+textarea,
+select {
+  -webkit-app-region: no-drag;
+  cursor: pointer;
+}
+
+.title {
+    display: flex;
+    padding: 0.25rem 0.5rem;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+    color: #ff6b6b;
+    margin: 0;
+    text-shadow: 2px 2px 0 #8000ff;
+    letter-spacing: 1px;
+
+    font-family: "Pixelify Sans";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+.timer-display {
+    font-size: 3rem;
+    color: #01ffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin: 0;
+    font-weight: 700;
+    text-shadow: 3px 3px 0 #41ef7e;
+}
+
+
+.minutes {
+    color: #01ffff;
+    animation: pulse 1s infinite;
+}
+
+.seconds {
+    color: #01ffff;
+    animation: pulse 1s infinite;
+}
+
+.colon {
+    color: #29a3a3;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.egg-type {
+    padding: 6px 10px;
+    background: linear-gradient(45deg, #a1c4fd, #c2e9fb);
+    border: none;
+    border-radius: 12px;
+    font-family: "Pixelify Sans", cursive;
+    font-size: 0.7rem;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-app-region: no-drag;
+    white-space: nowrap;
+}
+
+.egg-type.active {
+    background: linear-gradient(45deg, #030d82, #300090);
+    color: #bde0ed;
+    box-shadow: 0 0 0 2px rgba(179, 102, 255, 0.6);
+}
+
+.egg-options {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 6px;
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.btn {
+    padding: 12px 25px;
+    font-family: "Pixelify Sans";
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.start {
+    background: linear-gradient(45deg, #6bff97, #00d4aa);
+    color: white;
+}
+
+.pause {
+    background: linear-gradient(45deg, #ffd166, #ffb347);
+    color: white;
+}
+
+.reset {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+    color: white;
+}
+
+.egg-display-container {
+    width: 130px;
+    height: 130px;
+    margin: 0;
+    position: relative;
+    background: radial-gradient(circle at center, #e0f7ff 0%, #b3e0ff 100%);
+    border-radius: 10px;
+    border-width: 4px;
+    border: 5px dashed #4dc3ff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.egg-image {
+    width: 85%;
+    height: 85%;
+    max-width: 128px;
+    max-height: 128px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    image-rendering: crisp-edges;
+}
+
+.drag-bar {
+    width: 100%;
+    height: 36px;
+    -webkit-app-region: drag;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
